@@ -6,7 +6,10 @@ import javax.transaction.Transactional;
 import org.springframework.data.repository.CrudRepository;
 
 import com.dotest.we.models.App;
+
 @Transactional
-public interface AppDao extends CrudRepository<App,Integer>{
+public interface AppDao extends CrudRepository<App, Integer> {
 	public List<App> findByDeveloperId(int developer_id);
+
+	public App findByAppId(int app_id);
 }

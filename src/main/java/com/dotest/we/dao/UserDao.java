@@ -10,5 +10,5 @@ import com.dotest.we.models.User;
 
 @Transactional
 public interface UserDao extends CrudRepository<User, Integer>{
-	 public List<User> findByUserId(int user_id);  
+	 public User findByUserId(String user_id);  
 }

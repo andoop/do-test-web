@@ -7,14 +7,17 @@ import javax.persistence.*;
 public class User {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false,unique=true)  
+	private int id ;
+	
 	@Column(name = "user_id", nullable = false,unique=true)  
-	private int userId;
+	private String userId;
 	@Column(name="app_id",nullable=false)
 	private int appId;
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(int user_id) {
+	public void setUserId(String user_id) {
 		this.userId = user_id;
 	}
 	public int getAppId() {
@@ -24,6 +27,12 @@ public class User {
 		this.appId = app_id;
 	}
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	
 }

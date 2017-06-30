@@ -15,7 +15,7 @@ public class Log {
 	@Column(name="log_id",nullable=false,unique=true)
 	private int logId;
 	@Column(name="user_id")
-	private int userId;
+	private String userId;
 	@Column(name="log_time")
 	private String logTime;
 	@Column(name="log_type")
@@ -28,10 +28,10 @@ public class Log {
 	public void setLogId(int log_id) {
 		this.logId = log_id;
 	}
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(int user_id) {
+	public void setUserId(String user_id) {
 		this.userId = user_id;
 	}
 	public String getLogTime() {

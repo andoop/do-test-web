@@ -9,5 +9,5 @@ import com.dotest.we.models.Log;
 
 @Transactional
 public interface LogDao extends CrudRepository<Log, Integer>{
-	 public List<Log> findByUserId(int user_id);  
+	 public List<Log> findByUserId(String user_id);  
 }
