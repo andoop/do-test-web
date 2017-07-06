@@ -12,6 +12,10 @@ public class User {
 	
 	@Column(name = "user_id", nullable = false,unique=true)  
 	private String userId;
+	
+	@Column(name = "user_desc", nullable = false)  
+	private String userDesc;
+	
 	@Column(name="app_id",nullable=false)
 	private int appId;
 	public String getUserId() {
@@ -34,5 +38,11 @@ public class User {
 		this.id = id;
 	}
 	
+	public String getUserDesc() {
+		return userDesc;
+	}
+	public void setUserDesc(String userDesc) {
+		this.userDesc = userDesc;
+	}
 	
 }

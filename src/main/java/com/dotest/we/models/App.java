@@ -20,6 +20,8 @@ public class App {
     private String appName;
     @Column(name="app_pkg")
     private String appPkg;
+    @Column(name="app_time")
+    private String appTime;
     
     
     public int getAppId() {
@@ -46,5 +48,11 @@ public class App {
 	public void setAppPkg(String app_pkg) {
 		this.appPkg = app_pkg;
 	}
-    
+	
+	public String getAppTime() {
+		return appTime;
+	}
+    public void setAppTime(String appTime) {
+		this.appTime = appTime;
+	}
 }

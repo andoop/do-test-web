@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 
 @Controller
-@ComponentScan
+
 public class FileUploadController {
 
     private final StorageService storageService;
@@ -29,7 +29,7 @@ public class FileUploadController {
         this.storageService = storageService;
     }
 
-    @GetMapping("/file/")
+    @GetMapping("/file")
     public String listUploadedFiles(Model model) throws IOException {
 
         model.addAttribute("files", storageService

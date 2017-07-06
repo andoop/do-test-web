@@ -27,7 +27,6 @@ public class LogController {
 	@Resource
 	UserDao userDao;
 	
-	
 
 	/**
 	 * 添加Log日志记录
@@ -47,14 +46,10 @@ public class LogController {
 		if(app==null){
 			return "app is not exists";
 		}
-		//查询用户表，如果这个用户不存在，则将这个用户加入到用户表
-		User user = userDao.findByUserId(app_id+"*"+user_id);
+	
+		User user = userDao.findByUserId(app_id+":"+user_id);
 		if(user==null){
-			user=new User();
-			user.setAppId(Integer.parseInt(app_id));
-			user.setUserId(app_id+"*"+user_id);
-			//存入数据库
-			userDao.save(user);
+			return "用户不存在！";
 		}
 		
 		//List<String> logs = new Gson().fromJson(log_json,new TypeToken<List<String>>() {}.getType());
